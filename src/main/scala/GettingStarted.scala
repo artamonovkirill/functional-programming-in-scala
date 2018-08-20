@@ -1,7 +1,7 @@
 object GettingStarted {
 
-  def abs(n: Int): Int =
-    if (n < 0) -n
+  def abs(n: Int): Long =
+    if (n < 0) -n.toLong
     else n
 
   private def formatAbs(x: Int) =
