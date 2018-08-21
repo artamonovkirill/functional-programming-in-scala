@@ -8,7 +8,7 @@ class GettingStartedSpec extends Specification {
 
     def 'Calculates Fibonacci'() {
         expect:
-        fibonacci(index) == value
+        fibonacci(index as Short) == value
 
         where:
         index | value
@@ -20,6 +20,11 @@ class GettingStartedSpec extends Specification {
         6     | 5
         7     | 8
         8     | 13
+    }
+
+    def 'Fibonacci numbers are positive'() {
+        expect:
+        fibonacci(63 as Short) > 0
     }
 
     def 'Abs handles min integer'() {

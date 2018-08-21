@@ -16,11 +16,11 @@ object GettingStarted {
     go(n, 0)
   }
 
-  def fibonacci(n: Int): Int = {
+  def fibonacci(n: Short): Float = {
     @annotation.tailrec
-    def go(n: Int, previous: Int, current: Int): Int =
+    def go(n: Short, previous: Float, current: Float): Float =
       if (n == 1) previous
-      else go(n - 1, current, previous + current)
+      else go((n - 1).toShort, current, previous + current)
 
     go(n, 0, 1)
   }
