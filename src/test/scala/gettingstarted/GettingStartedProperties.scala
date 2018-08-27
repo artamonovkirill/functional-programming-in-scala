@@ -1,4 +1,6 @@
-import GettingStarted._
+package gettingstarted
+
+import gettingstarted.GettingStarted._
 import org.scalatest.Matchers
 import org.scalatest.prop.GeneratorDrivenPropertyChecks
 

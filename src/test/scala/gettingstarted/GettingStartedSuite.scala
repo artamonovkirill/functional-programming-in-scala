@@ -1,4 +1,6 @@
-import GettingStarted.abs
+package gettingstarted
+
+import gettingstarted.GettingStarted.abs
 import org.junit.Test
 import org.scalatest.junit.JUnitSuite
 import org.scalatest.prop.Checkers

@@ -1,3 +1,5 @@
+package gettingstarted
+
 object GettingStarted {
 
   def abs(n: Int): Long =

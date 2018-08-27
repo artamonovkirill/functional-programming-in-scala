@@ -1,3 +1,5 @@
+package gettingstarted
+
 import spock.lang.Specification
 
 import static GettingStarted.abs
