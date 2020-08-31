@@ -1,6 +1,6 @@
-# Gradle
-.gradle
-/build/
+# Scala
+project/target
+target
 
 # Intellij
 .idea/

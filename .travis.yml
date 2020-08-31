@@ -1,11 +1,19 @@
-language: java
-script: "./gradlew build"
+language: scala
+jdk: openjdk14
+script: sbt test
+before_cache:
+  - rm -fv $HOME/.ivy2/.sbt.ivy.lock
+  - find $HOME/.ivy2/cache -name "ivydata-*.properties" -print -delete
+  - find $HOME/.sbt        -name "*.lock"               -print -delete
 cache:
   directories:
-  - "$HOME/.gradle"
+    - $HOME/.cache/coursier
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt
 notifications:
   slack:
     rooms:
-      secure: gCDfp8nV9kwuZp3h+exLyzD+HHXZucVK9zNi2oCtIvFymTeFjuBVJ4wOBmBDTB0jXXEsBAE/JZCHktnzUGDbcHbColUow7qEJYWRhadljwYJNLMo39FGR4+y30VCr7JPHUXt+9WLnGe8zDDCBVPipQJ/L6+86MbEfT5Q5dT91eAazXQCa9j9AoLcsf5VJZqlI9CyDyloFocDc0rW2XRu64eByymkYKPOBvnSZ0ba/B4yTyAO5QpQt0IMGBQGgGd0+rRVZU4A7/PQKBqw2c9cCo/76t2lcqhSMafEwWd5fO7PcxR0Peb3kCHri764PySKoucD/SKGOjQgf7iECkRt7gKbvBZU4oaravAsfNIK/olNwKbFa01Vmy/PW4FNaYkqRkAgKgm9PB8oKghycKnESvrlh/6Wz4xOyAqqBCCM1zMyxpueDlugY5XdTI3oRMEZ+x9T9DNjUhXiGcNwrLVCZwoMLlArgPSRZW1igeflFMU82DhhbMj0f0Xt+LjYvAjhsJIvvhPbtWXgOnKRX2oGp9M9yGelAK0vBP+DkNacRsdkAUcKrPVM7zx+UW/q8JxQJhmhMwD0MOgl9oQ4SppNqwv57JhVHtlYOkPqN+sJwcvZQ8otmbV1ZJdQ/jep7liiNV76W6kyE4Uc52vpWU89hsNzJBkdxMQQ01oTBG6Rsjk=
+      secure: Tleano7ihbgQ79dlJJSfkwpf7KJxUU0c51yS0KeDrrnpRE67HiMhM8Un8HDlMyz5gNrXqfyxyhimvJ2SgA9IGzVB/Fhs/yzqw6ctJzfozqhBiy16+2PI/d22MPL++uWkxLwAaEUkcyjjPlfrbrnGBLVrjH3MuHzfeB8a1WqWgq7oFUPRRZqBvbqi6LN9ry0pM3DzeSGbvMu7VAIb+n+ItuA14RvECNSHMzqAz7JPib2SP4uJ4otqa1n4xvMuTUUBLgNDoRRWE/KQdwlNQcP6xyrxyYp3z5IvQlrNvC9q9+sa2I5sTsH1uZc/FXfynAnRUVXJoIFDH+aF4v1njIEmtAY6D3ooembJcWsku5noFLuEhMeWY2Ar8U4nrgvCcp65ZI/IhhOrScg5PD9ErPzLWeUAfD5hI9wvxSnCcX2nn7N6UAQc/h2MWm+sLyVRT5Ck5rTof0sl2r2sv9lNRURi4zSNJcERzOe6BFDpIzfF13AXcMGb87H+EFnwBE/2UE9makEabGJCAjQ9byDy7owiK1EGOV9ZKYNoRZcFscC0pvZLSRvdpCyzvKFX69d2eT25Rk8Qaejyb40NJ998usWpwHKU3TqJYUm+JSD2BPpsLjI9nOstNkNutHvyKzgO7lvgykcaOjYVFGjV16xCJPqMtfV4nBjlH5ZAnRr0ubkeNTI=
     on_success: change
     on_failure: change
+  email: false
