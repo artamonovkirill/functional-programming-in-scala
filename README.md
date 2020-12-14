@@ -6,3 +6,9 @@ Exercises from [Functional Programming in Scala](https://www.manning.com/books/f
 * ScalaTest/ScalaCheck
 
 Check also [this repo](https://github.com/fpinscala/fpinscala).
+
+## Building the project
+
+```bash
+sbt test
+```
