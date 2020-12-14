@@ -1,4 +1,4 @@
-# Functional Programming in Scala [![Build Status](https://travis-ci.org/artamonovkirill/functional-programming-in-scala.svg?branch=master)](https://travis-ci.org/artamonovkirill/functional-programming-in-scala) 
+# Functional Programming in Scala ![SBT](https://github.com/artamonovkirill/functional-programming-in-scala/workflows/SBT/badge.svg) 
 
 Exercises from [Functional Programming in Scala](https://www.manning.com/books/functional-programming-in-scala) with some testing experiments on top:
 
